@@ -30,7 +30,4 @@ RUN a2enmod rewrite expires
 VOLUME /var/www/html
 
 
-COPY docker-entrypoint.sh /usr/local/bin/
-
-ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
