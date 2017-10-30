@@ -3,6 +3,12 @@ services:
   php:
     build: .
     ports:
-      - 8080:80
+      - 8081:80
     volumes:
-       - .:/var/www/html
+       - .:/var/www/app/html
+    environment:
+     - DBHOST=phpespprod.cbiwdnuevyaj.us-west-1.rds.amazonaws.com:3306
+     - DBUSER=phpesp
+     - DBPASS=kqed12345
+     - WEB_USER=kqed
+     - WEB_PASS=kqed123

@@ -71,6 +71,8 @@ usr/sbin/locale-gen
 
 RUN ln -sf /dev/stderr /var/log/apache2/error.log
 
+#ADD htpasswd.conf /etc/apache2/conf-available/htpasswd.conf
+
 COPY dummy.crt  /etc/ssl/crt/dummy.crt
 COPY dummy.key  /etc/ssl/crt/dummy.key
 COPY default.conf /etc/apache2/sites-available/default
